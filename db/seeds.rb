@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+users = User.create([{ name: 'batman' }, { name: 'robin' }])
+groups = Group.create([{ name: 'justice league'}, { name: 'batcave stalagmite counting club'}])
+users.first.groups << groups.first
+users.first.groups << groups.last
+users.last.groups << groups.last
